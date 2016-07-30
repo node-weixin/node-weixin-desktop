@@ -1,0 +1,26 @@
+{
+  "name": "node-weixin-desktop",
+  "description": "Desktop Application for node-weixin",
+  "main": "dist/index.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-weixin",
+    "electron",
+    "gui",
+    "desktop"
+  ],
+  "homepage": "https://github.com/node-weixin/node-weixin-desktop",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

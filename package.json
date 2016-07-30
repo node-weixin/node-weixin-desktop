@@ -1,0 +1,53 @@
+{
+  "name": "node-weixin-desktop",
+  "version": "0.0.0",
+  "description": "Desktop Application for node-weixin",
+  "homepage": "www.node-weixin.com",
+  "author": {
+    "name": "node-weixin",
+    "email": "caldiion@gmail.com",
+    "url": "blog.3gcnbeta.com"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "keywords": [
+    "node-weixin",
+    "electron",
+    "gui",
+    "desktop"
+  ],
+  "devDependencies": {
+    "babel-core": "^5.5.0",
+    "babel-eslint": "^4.1.8",
+    "del": "^2.0.2",
+    "electron-prebuilt": "^1.3.1",
+    "eslint": "^2.1.0",
+    "eslint-config-xo-space": "^0.13.0",
+    "eslint-plugin-babel": "^3.1.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^3.0.3"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "node-weixin/node-weixin-desktop",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "Apache-2.0"
+}
