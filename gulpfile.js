@@ -12,6 +12,7 @@ var del = require('del');
 var isparta = require('isparta');
 var electron = require('electron-prebuilt');
 var childProcess = require('child_process');
+var sass = require('gulp-sass');
 
 
 // Initialize the babel transpiler so ES2015 files gets compiled
@@ -27,7 +28,20 @@ gulp.task('static', function () {
 });
 
 gulp.task('nsp', function (cb) {
-  nsp({ package: path.resolve('package.json') }, cb);
+  nsp({
+    package: path.resolve('package.json')
+  }, cb);
+});
+
+
+gulp.task('sass', function () {
+  return gulp.src(['lib/sass/**/*.scss', 'bower_components/bootstrap-sass/stylesheets/**/*.scss'])
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('lib/static/css'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('lib/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('pre-test', function () {
@@ -45,7 +59,9 @@ gulp.task('test', ['pre-test'], function (cb) {
 
   gulp.src('test/**/*.js')
     .pipe(plumber())
-    .pipe(mocha({ reporter: 'spec' }))
+    .pipe(mocha({
+      reporter: 'spec'
+    }))
     .on('error', function (err) {
       mochaErr = err;
       throw err;
@@ -79,8 +95,10 @@ gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('run', function () {
-  childProcess.spawn(electron, ['./lib/index'], { stdio: 'inherit' });
+gulp.task('run', ['sass:watch'], function () {
+  childProcess.spawn(electron, ['./lib/index'], {
+    stdio: 'inherit'
+  });
 });
 
 gulp.task('prepublish', ['nsp', 'babel']);

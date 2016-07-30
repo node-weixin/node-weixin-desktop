@@ -36,6 +36,7 @@
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
+    "gulp-sass": "^2.3.2",
     "isparta": "^3.0.3"
   },
   "eslintConfig": {
