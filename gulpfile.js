@@ -15,6 +15,7 @@ var childProcess = require('child_process');
 var sass = require('gulp-sass');
 
 var createdProcess;
+var watchStatus = false;
 
 
 // Initialize the babel transpiler so ES2015 files gets compiled
@@ -43,7 +44,15 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('lib/sass/**/*.scss', ['run', 'sass']);
+  gulp.watch('lib/sass/**/*.scss', ['run:nowatch', 'sass']);
+});
+
+gulp.task('js:watch', function () {
+  gulp.watch('lib/**/*.js', ['run:nowatch']);
+});
+
+gulp.task('html:watch', function () {
+  gulp.watch('lib/**/*.html', ['run:nowatch']);
 });
 
 gulp.task('pre-test', function () {
@@ -97,7 +106,18 @@ gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('run', ['sass:watch'], function () {
+gulp.task('run:nowatch', function () {
+  watchStatus = true;
+  if (createdProcess) {
+    createdProcess.kill();
+  }
+  createdProcess = childProcess.spawn(electron, ['./lib/index'], {
+    stdio: 'inherit'
+  });
+});
+
+gulp.task('run', ['sass:watch', 'js:watch', 'html:watch'], function () {
+  watchStatus = true;
   if (createdProcess) {
     createdProcess.kill();
   }

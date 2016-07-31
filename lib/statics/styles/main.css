@@ -1,0 +1,25 @@
+.add-file h1 {
+  padding: 5px 20px; }
+  .add-file h1 * {
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .add-file h1 input[name=config-file]:after {
+    content: '+';
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: #aaa;
+    line-height: 64px;
+    background-color: #fff;
+    text-align: center; }
+  .add-file h1 input[name=config-file] {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background-color: #F00; }
