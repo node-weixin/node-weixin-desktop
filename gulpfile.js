@@ -14,6 +14,8 @@ var electron = require('electron-prebuilt');
 var childProcess = require('child_process');
 var sass = require('gulp-sass');
 
+var createdProcess;
+
 
 // Initialize the babel transpiler so ES2015 files gets compiled
 // when they're loaded
@@ -35,13 +37,13 @@ gulp.task('nsp', function (cb) {
 
 
 gulp.task('sass', function () {
-  return gulp.src(['lib/sass/**/*.scss', 'bower_components/bootstrap-sass/stylesheets/**/*.scss'])
+  return gulp.src(['lib/sass/**/*.scss'])
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('lib/static/css'));
+    .pipe(gulp.dest('lib/statics/styles'));
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('lib/sass/**/*.scss', ['sass']);
+  gulp.watch('lib/sass/**/*.scss', ['run', 'sass']);
 });
 
 gulp.task('pre-test', function () {
@@ -96,7 +98,10 @@ gulp.task('clean', function () {
 });
 
 gulp.task('run', ['sass:watch'], function () {
-  childProcess.spawn(electron, ['./lib/index'], {
+  if (createdProcess) {
+    createdProcess.kill();
+  }
+  createdProcess = childProcess.spawn(electron, ['./lib/index'], {
     stdio: 'inherit'
   });
 });
