@@ -40,7 +40,7 @@ gulp.task('nsp', function (cb) {
 gulp.task('sass', function () {
   return gulp.src(['lib/sass/**/*.scss'])
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('lib/statics/styles'));
+    .pipe(gulp.dest('lib/frontend/styles'));
 });
 
 gulp.task('sass:watch', function () {
