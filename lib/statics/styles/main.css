@@ -1,11 +1,16 @@
-.add-file h1 {
+.contianer .row {
+  margin: 0; }
+
+.contianer .add-file h1 {
   padding: 5px 20px; }
-  .add-file h1 * {
+  .contianer .add-file h1 * {
     border: 0;
     margin: 0;
     padding: 0; }
-  .add-file h1 input[name=config-file]:after {
+  .contianer .add-file h1 input[name=config-file]:after {
     content: '+';
+    width: 0px;
+    height: 0px;
     width: 64px;
     height: 64px;
     position: absolute;
@@ -17,9 +22,16 @@
     line-height: 64px;
     background-color: #fff;
     text-align: center; }
-  .add-file h1 input[name=config-file] {
+  .contianer .add-file h1 input[name=config-file] {
+    font-size: 0px;
     display: inline-block;
     position: relative;
+    width: 0px;
+    height: 0px;
     width: 64px;
     height: 64px;
-    background-color: #F00; }
+    background-color: #f00; }
+
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0; } }
