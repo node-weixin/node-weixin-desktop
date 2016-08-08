@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "weui": "^0.4.3"
   }
 }
