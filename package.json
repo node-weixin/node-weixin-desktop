@@ -50,5 +50,8 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-weixin-api": "^0.5.1"
+  }
 }
