@@ -1,0 +1,24 @@
+<div ng-include="'header.html'"></div>
+
+<div class="body-bar ng-scope">
+  <div class="container">
+    <div class="user">
+      <div class="list margin-top">
+        <a class="list-select-item" href="#/setting/app"> <i class="fa fa-key list-item-style icon-password"></i> app </a>
+        <a class="list-select-item" href="#/setting/message"> <i class="fa fa-key list-item-style icon-password"></i> message </a>
+        <a class="list-select-item" href="#/about"> <i class="fa fa-question-circle list-item-style icon-about"></i> 关于 </a>
+        <!--<a class="list-select-item" href="#/feedback">-->
+        <!--<i class="fa fa-commenting list-item-style icon-feedback"></i> 意见反馈 </a>-->
+      </div>
+      <h1>认证订阅号</h1>
+
+      <div class="list margin-top">
+        <a class="list-select-item" href="http://m.t1bao.com/"> <i class="fa fa-external-link-square list-item-style icon-link"></i> 查看客户端 </a>
+      </div>
+      <div class="list margin-top">
+        <a class="list-select-item-no-arrow" ng-click="logout()"> <i class="fa fa-sign-out list-item-style icon-logout"></i> 退出 </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-include="'footer.html'"></div>
