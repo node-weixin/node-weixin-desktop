@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>微信共号开发助手</title>
   <link rel="stylesheet" href="../styles/bootstrap.css" />
+  <link rel="stylesheet" href="../../../bower_componnts/font-awesome/css/font-awesome.css" />
   <link rel="stylesheet" href="../styles/egg.css" />
   <link rel="stylesheet" href="../styles/main.css" />
   <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -12,7 +13,7 @@
   <script src="../scripts/bootstrap/bootstrap.js"></script>
 </head>
 
-<body>
+<body class="egg">
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -79,7 +80,7 @@
       </div>
     </div>
   </div>
-
+<div class="footer-bar ng-scope"> <div class="container"> <div class="row"> <div class="col-md-3 col-xs-3"> <div class="tool-bar order" ng-class="{'active': module == 'grocery'}"> <p><a href="#/grocery/home"><i class="fa fa-home"></i>店铺</a></p><b></b></div> </div> <div class="col-md-3 col-xs-3"> <div class="tool-bar grocery" ng-class="{'active': module == 'order'}"> <p><a href="#/order/home"><i class="fa fa-file-text"></i>订单</a></p><b></b></div> </div> <div class="col-md-3 col-xs-3"> <div class="tool-bar cart" ng-class="{'active': module == 'merchandise'}"> <p><a href="#/merchandise/home"><i class="fa fa-shopping-cart"></i>商品</a></p><b></b></div> </div> <div class="col-md-3 col-xs-3"> <div class="tool-bar user last active" ng-class="{'active': module == 'user'}"> <p><a href="#/user/home"><i class="fa fa-user"></i>店长</a></p><b></b></div> </div> </div> </div> </div>
 </body>
 
 </html>
