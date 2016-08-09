@@ -1,0 +1,60 @@
+<div ng-include="'header.html'"></div>
+
+<div class="body-bar ng-scope">
+  <div class="container">
+    <h1 class="menu-title">今日状态</h1>
+    <div class="row menu">
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item users"> <i class="bubble">10</i> <i class="fa fa-users"></i> <span>用户(10/12338)</span> </a>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item comments"> <i class="bubble">1</i> <i class="fa fa-comments"></i> <span>消息(1/60)</span> </a>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item events"><i class="bubble">1</i> <i class="fa fa-feed"></i> <span>事件(1/18)</span> </a>
+      </div>
+    </div>
+
+    <h1 class="menu-title">个人订阅号</h1>
+    <div class="row menu">
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item orders" ng-click="click('orders')"> <i class="bubble ng-binding ng-hide" ng-show="orders.length">  </i> <i class="fa fa-file-text"></i> <span>素材管理(13)</span>          </a>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item income" ng-click="click('income')"> <i class="fa fa-comments"></i> <span>消息管理(134)</span> </a>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item jssdk" ng-click="click('preview')"> <i class="fa fa-globe"></i> <span>网页微信(JSSDK)</span> </a>
+      </div>
+    </div>
+    <h1 class="menu-title">认证订阅号</h1>
+    <div class="row subscriber">
+      <div class="col-md-3 col-xs-3">
+        <a class="native-item merchandise" ng-click="click('merchandise')"> <i class="fa fa-list-alt"></i> <span>菜单管理</span> </a>
+      </div>
+      <div class="col-md-3 col-xs-3">
+        <a class="native-item users" ng-click="click('subscribers')"> <i class="bubble">10</i> <i class="fa fa-users"></i> <span>用户管理</span></a>
+      </div>
+      <div class="col-md-3 col-xs-3">
+        <a class="native-item traffic" ng-click="click('traffic')"> <i class="fa fa-bar-chart"></i> <span>多客服管理</span> </a>
+      </div>
+      <div class="col-md-3 col-xs-3">
+        <a class="native-item card" ng-click="click('traffic')"> <i class="fa fa-tags"></i> <span>卡包管理</span> </a>
+      </div>
+    </div>
+    <h1 class="menu-title">服务号</h1>
+
+    <div class="row menu service">
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item position" ng-click="click('position')"> <i class="fa fa-qrcode"></i> <span>二维码信息</span> </a>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item settings" ng-click="click('settings')"> <i class="fa fa-gear"></i> <span>设备功能</span> </a>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <a class="native-item payment" ng-click="click('payment')"> <i class="fa fa-credit-card"></i> <span>支付设置</span> </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-include="'footer.html'"></div>

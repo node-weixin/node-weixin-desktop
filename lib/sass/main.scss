@@ -1,52 +1,14 @@
-$imageWidth: 64px;
 
-.contianer {
-  .row {
-    margin: 0;
-  }
-  .add-file {
-    h1 {
-      padding: 5px 20px;
-
-      * {
-        border: 0;
-        margin: 0;
-        padding: 0;
-      }
-
-      input[name=config-file]:after {
-        content: '+';
-        width: 0px;
-        height: 0px;
-        width: $imageWidth;
-        height: $imageWidth;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        color: #aaa;
-        line-height: $imageWidth;
-        background-color: #fff;
-        text-align: center;
-      }
-
-      input[name=config-file] {
-        font-size: 0px;
-        display: inline-block;
-        position: relative;
-        width: 0px;
-        height: 0px;
-        width: $imageWidth;
-        height: $imageWidth;
-        background-color: #f00;
-      }
-    }
-  }
+.menu-title {
+  background-color: #FFF;
+  color: #888;
+  font-size: 16px;
+  margin: 0 -15px;
+  padding: 10px;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    border-radius: 0;
+.fa {
+  span {
+    font-size: 24px;
   }
 }

@@ -1,0 +1,248 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.map-controller {
+  background-color: white;
+  margin: 10px -15px;
+  text-align: center;
+  padding: 10px 15px;
+  p.alert {
+    margin: 10px 0 0;
+    padding: 5px;
+  }
+}
+
+.map {
+  p.alert {
+    background-color: white;
+    position: fixed;
+    left: 100px;
+    right: 100px;
+    top: 50%;
+    z-index: 1;
+  }
+}
+.margin-top {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid transparent;
+}
+.not-found {
+  font-size: 32px;
+  color: #2196F3;
+  .fa {
+    font-size: 100px;
+    color: #F44336;
+  }
+}
+.about {
+  margin: 20px auto;
+  text-align: center;
+  > h3 {
+    color: #F577A7;
+    height: 30px;
+    font-size: 16px;
+  }
+  > h3,
+  > h2 {
+    padding: 5px;
+    margin: 0;
+  }
+}
+.loading {}
+.user {
+  .profile {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    line-height: 80px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    background-color: #2196F3;
+    text-align: center;
+    margin: 10px -15px;
+    div.logo {
+      flex-grow: 1;
+      .image-uploader {
+        vertical-align: middle;
+        border-radius: 40px;
+        border: 4px solid #ccc;
+      }
+    }
+    div.content {
+      flex-grow: 5;
+      text-align: left;
+      h1 {
+        font-size: 24px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0;
+        border: 0;
+        margin: 0;
+      }
+      h2 {
+        font-size: 16px;
+        height: 30px;
+        margin: 0;
+        padding-left: 3px;
+      }
+    }
+  }
+  .profile:after {
+    content: "\f054";
+    text-align: right;
+    position: absolute;
+    right: 35px;
+    top: 32px;
+    font-size: 30px;
+    font: normal normal normal 14px/1 FontAwesome;
+  }
+  .profile {}
+}
+
+.icon-password {
+  color: #FF9800;
+}
+.icon-about {
+  color: #9C27B0;
+}
+.icon-feedback {
+  color: #4CAF50;
+}
+
+.icon-link {
+  color: #4CAFF0;
+}
+.icon-logout {
+  color: #000;
+}
+.menu {
+  padding: 2px;
+  background-color: #FFF;
+}
+.menu:last-child {
+  padding-bottom: 4px;
+}
+.menu:first-child {
+  padding-top: 6px;
+}
+
+.native-item {
+  position: relative;
+  background-color: #fff;
+  display: block;
+  margin: 0 -12px;
+  // margin-bottom: 4px;
+  text-decoration: none;
+  > i.bubble {
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    /* border: 1px solid #ccc; */
+    background-color: #fff;
+    color: #F00;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    box-shadow: 1px 1px 1px #9E9E9E;
+  }
+  > i.fa {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    padding: 10px 0;
+    background-color: #eee;
+  }
+  > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #9E9E9E;
+    color: #FFF;
+    padding: 3px;
+  }
+}
+
+.native-item:hover, .native-item:focus{
+  text-decoration: none;
+}
+
+.native-item.events {
+  color: #03A9F4;
+}
+.native-item.users {
+  color: #4CAF50;
+}
+.native-item.share {
+  color: #FFC107;
+}
+.native-item.barcode {
+  color: #FF5722;
+}
+.native-item.income {
+  color: #F44336;
+}
+.native-item.jssdk {
+  color: #607D8B;
+}
+.native-item.merchandise {
+  color: #009688;
+}
+.native-item.subscribers {
+  color: #795548;
+}
+.native-item.traffic {
+  color: #9C27B0;
+}
+.native-item.position {
+  color: #F44336;
+}
+.native-item.settings {
+  color: #3F51B5;
+}
+.native-item.payment {
+  color: #4CAF50;
+}
+.native-item.users {
+  color: #65355B;
+}
+.native-item.comments {
+  color: #009688;
+}
+.native-item.feedback {
+  color: #B7853B;
+}
+.native-item.disabled {
+  opacity: 0.5;
+}
+
+#image-captcha {
+  i, span {
+    color: red;
+    font-size: 18px;
+  }
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 640px) {
+  .map {
+    p.alert {
+      left: 20px;
+      right: 20px;
+    }
+  }
+}

@@ -23,6 +23,9 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "bootstrap": "^3.3.7",
-    "weui": "^0.4.3"
+    "weui": "^0.4.3",
+    "font-awesome": "^4.6.3",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
   }
 }
