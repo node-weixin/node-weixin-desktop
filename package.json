@@ -52,9 +52,11 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "express": "^4.14.0",
     "node-form-validator": "^1.1.0",
     "node-notifier": "^4.6.0",
     "node-weixin-api": "^0.5.1",
+    "node-weixin-express": "^0.3.3",
     "node-weixin-settings": "^0.2.1"
   }
 }

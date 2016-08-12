@@ -1,16 +1,19 @@
 <div ng-include="'header.html'"></div>
 
 <div class="body-bar ng-scope">
-  <div class="container">
+  <div class="container wrapper">
     <div class="row">
       <h4 class="text-center">Auth测试</h4>
-
-      <div class="col-md-6 col-xs-6">
-      </div>
-      <div class="col-md-6 col-xs-6">
+      <div class="col-md-12 col-xs-12">
         <div class="text-center">
           <button type="submit" class="btn btn-danger" ng-click="testAuth()">开始测试</button>
         </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <p>状态: </p>
+        <p>{{status || '未测试'}}</p>
+        <p>Access Token: </p>
+        <p style="word-wrap:break-word;">{{auth.accessToken || '未测试'}}</p>
       </div>
     </div>
   </div>

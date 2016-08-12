@@ -1,0 +1,23 @@
+<div ng-include="'header.html'"></div>
+
+<div class="body-bar ng-scope">
+  <div class="container wrapper">
+    <div class="row">
+      <h4 class="text-center">JSSDK微信网页测试</h4>
+      <div class="col-md-12 col-xs-12">
+        <div class="text-center">
+          <button type="submit" class="btn btn-danger" ng-click="test.start()">启动服务器</button>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <p>服务器状态: </p>
+        <p>{{server.status || '未启动'}}</p>
+        <p>当前URL地址: </p>
+        <p>{{server.url || '未连接'}}</p>
+        <p>当前模板地址: </p>
+        <p>{{auth.accessToken || '未配置'}} <a href="#/settings/template" ng-show="!auth.accessToken" class="btn btn-default">配置模板地址</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div ng-include="'footer.html'"></div>
