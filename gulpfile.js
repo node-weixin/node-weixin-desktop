@@ -15,17 +15,25 @@ var childProcess = require('child_process');
 var sass = require('gulp-sass');
 
 var createdProcess;
-var watchStatus = false;
-
+var watchStatus;
 
 // Initialize the babel transpiler so ES2015 files gets compiled
 // when they're loaded
 require('babel-core/register');
 
 gulp.task('static', function () {
-  return gulp.src('**/*.js')
+  return gulp.src('lib/**/*.js')
     .pipe(excludeGitignore())
-    .pipe(eslint())
+    .pipe(eslint({
+      globals: [
+        'angular',
+        '$'
+      ],
+      envs: [
+        'browser',
+        'nodejs'
+      ]
+    }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });

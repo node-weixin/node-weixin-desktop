@@ -53,6 +53,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "node-form-validator": "^1.1.0",
-    "node-weixin-api": "^0.5.1"
+    "node-notifier": "^4.6.0",
+    "node-weixin-api": "^0.5.1",
+    "node-weixin-settings": "^0.2.1"
   }
 }
