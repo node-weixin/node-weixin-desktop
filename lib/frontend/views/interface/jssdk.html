@@ -21,13 +21,31 @@
             <h4>当前URL地址</h4>
             <p>{{server.url || '未连接'}}</p>
           </div>
-          <div class="col-md-4 col-xs-4"><a ng-click="open()" class="btn btn-success">打开</a></div>
+          <div class="col-md-4 col-xs-4"><a ng-show="server.url" ng-click="open()" class="btn btn-success">打开</a></div>
+          <div class="col-md-12 col-xs-12" ng-show="server.url">
+            <h4>微信URLs</h4>
+            <div>
+              <p>服务器校验地址:</p>
+              <p>{{server.url}}{{server.prefix}}/auth/ack</p>
+              <p><button ng-click="copy()">复制URL</button></p>
+            </div>
+            <p>JSSDK配置请求地址: <br/>
+            {{server.url}}{{server.prefix}}/jssdk/config<br/>
+            微信扫描打开：<br/>
+            <canvas id="jsssdk">
+            </canvas>
+            </p>
+            <p>Oauth访问地址: {{server.url}}{{server.prefix}}/oauth/access</p>
+          </div>
           <div class="col-md-8 col-xs-8">
             <h4>当前模板地址</h4>
             <p>
               {{template || '未配置'}}</p>
           </div>
           <div class="col-md-4 col-xs-4"><a href="#/settings/template" class="btn btn-danger">配置模板地址</a></div>
+          <div class="qrcode col-md-12 col-xs-12">
+            <canvas></canvas>
+          </div>
         </div>
       </div>
     </div>

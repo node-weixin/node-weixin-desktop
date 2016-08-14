@@ -26,6 +26,7 @@
     "weui": "^0.4.3",
     "font-awesome": "^4.6.3",
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "qrcode.js": "qrcode#^1.0.2"
   }
 }
