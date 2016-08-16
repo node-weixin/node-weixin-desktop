@@ -15,6 +15,21 @@
 
 .jssdk {
   background-color: #FFF;
+  margin-top: 10px;
+  .btn {
+    margin-top: 10px;
+  }
+    table {
+    tr {
+      td, th {
+        padding: 5px;
+
+      }
+    }
+  }
+  * {
+    word-break: break-all;
+  }
   h4 {
     color: #ccc;
   }

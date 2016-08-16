@@ -9,6 +9,13 @@
   font-size: 24px; }
 
 .jssdk {
-  background-color: #FFF; }
+  background-color: #FFF;
+  margin-top: 10px; }
+  .jssdk .btn {
+    margin-top: 10px; }
+  .jssdk table tr td, .jssdk table tr th {
+    padding: 5px; }
+  .jssdk * {
+    word-break: break-all; }
   .jssdk h4 {
     color: #ccc; }

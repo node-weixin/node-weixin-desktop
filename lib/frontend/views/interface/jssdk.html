@@ -4,48 +4,90 @@
   <div class="container jssdk">
     <div class="row">
       <div class="col-md-12 col-xs-12">
-        <h1 class="text-center">
-          
-        </h1>
-      </div>
-      <div class="col-md-12 col-xs-12">
         <div class="contianer">
           <div class="col-md-8 col-xs-8">
             <h4>服务器状态</h4>
-            <p>{{server.status || '未启动'}}</p>
+            <p>{{jssdk.status || '未启动'}}</p>
           </div>
           <div class="col-md-4 col-xs-4">
-            <button type="submit" class="btn btn-danger" ng-click="test.start()">启动服务器</button>
-          </div>
-          <div class="col-md-8 col-xs-8">
-            <h4>当前URL地址</h4>
-            <p>{{server.url || '未连接'}}</p>
-          </div>
-          <div class="col-md-4 col-xs-4"><a ng-show="server.url" ng-click="open()" class="btn btn-success">打开</a></div>
-          <div class="col-md-12 col-xs-12" ng-show="server.url">
-            <h4>微信URLs</h4>
-            <div>
-              <p>服务器校验地址:</p>
-              <p>{{server.url}}{{server.prefix}}/auth/ack</p>
-              <p><button ng-click="copy()">复制URL</button></p>
-            </div>
-            <p>JSSDK配置请求地址: <br/>
-            {{server.url}}{{server.prefix}}/jssdk/config<br/>
-            微信扫描打开：<br/>
-            <canvas id="jsssdk">
-            </canvas>
-            </p>
-            <p>Oauth访问地址: {{server.url}}{{server.prefix}}/oauth/access</p>
+            <button type="submit" ng-show="!started" class="btn btn-danger" ng-click="test.start()">启动服务器</button>
           </div>
           <div class="col-md-8 col-xs-8">
             <h4>当前模板地址</h4>
             <p>
               {{template || '未配置'}}</p>
           </div>
-          <div class="col-md-4 col-xs-4"><a href="#/settings/template" class="btn btn-danger">配置模板地址</a></div>
-          <div class="qrcode col-md-12 col-xs-12">
-            <canvas></canvas>
+          <div class="col-md-4 col-xs-4"><a href="#/settings/template" class="btn btn-warning">配置模板地址</a></div>
+
+          <div class="col-md-8 col-xs-8">
+            <h4>消息存储地址</h4>
+            <p>
+              {{storage || '未配置,请先配置消息存储地址'}}
+            </p>
+            <p ng-show="error">
+              {{errorMesssage}}
+            </p>
           </div>
+          <div class="col-md-4 col-xs-4"><a href="#/settings/storage" class="btn btn-info">配置保存地址</a></div>
+
+          <table class="table" ng-show="jssdk.url">
+            <tr>
+              <th class="text-center">
+                项目
+              </th>
+              <th class="text-center">
+                地址
+              </th>
+              <th class="text-center">
+                操作
+              </th>
+            </tr>
+            <tr>
+              <td>
+                当前URL地址
+              </td>
+              <td>
+                {{jssdk.url || '未连接'}}
+              </td>
+              <td>
+                <a ng-show="jssdk.url" ng-click="open()" class="btn btn-default">打开</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                服务器校验地址
+              </td>
+              <td>
+                {{jssdk.url}}{{jssdk.prefix}}/auth/ack
+              </td>
+              <td>
+                <button ng-click="copy()" class="btn btn-default">复制</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                JSSDK测试网页地址
+              </td>
+              <td>
+                {{jssdk.url}}{{jssdk.prefix}}/jssdk<br/>
+                <p>微信扫描打开网址</p>
+                <div id="qrcode-jssdk"></div>
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                JSSDK配置请求地址
+              </td>
+              <td>
+                {{jssdk.url}}{{jssdk.prefix}}/jssdk/config
+              </td>
+              <td>
+              </td>
+            </tr>
+          </table>
+
         </div>
       </div>
     </div>

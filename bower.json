@@ -3,7 +3,7 @@
   "description": "Desktop Application for node-weixin",
   "main": "dist/index.js",
   "authors": [
-    "[object Object]"
+    ""
   ],
   "license": "Apache-2.0",
   "keywords": [
