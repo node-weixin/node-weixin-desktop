@@ -64,6 +64,8 @@
     "node-notifier": "^4.6.0",
     "node-weixin-api": "^0.5.1",
     "node-weixin-express": "^0.3.7",
-    "node-weixin-settings": "^0.2.1"
+    "node-weixin-settings": "^0.2.1",
+    "sails-disk": "^0.10.10",
+    "validator": "^5.5.0"
   }
 }
