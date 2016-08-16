@@ -6,8 +6,14 @@ ARCH=$2
 VERSION=$3
 APPVERSION=$4
 APPNAME=WeTop
-ICON=./lib/frontend/images/app.icns
+if [ $1='darwin' ];
+then # if/then branch
+  ICON=./lib/frontend/images/app.png
+else # else branch
+  ICON=./lib/frontend/images/app.icns
+fi
 RELEASE=./release
+echo $ICON
 
 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 

@@ -27,6 +27,7 @@ gulp.task('static', function () {
     .pipe(eslint({
       globals: [
         'angular',
+        'QRCode',
         '$'
       ],
       envs: [
