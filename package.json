@@ -1,5 +1,5 @@
 {
-  "name": "WeTop",
+  "name": "wetop",
   "version": "0.0.1",
   "description": "Desktop Application for node-weixin",
   "homepage": "www.node-weixin.com",
@@ -64,7 +64,7 @@
     "node-form-validator": "^1.1.0",
     "node-notifier": "^4.6.0",
     "node-weixin-api": "^0.5.1",
-    "node-weixin-express": "^0.3.7",
+    "node-weixin-express": "^0.3.8",
     "node-weixin-settings": "^0.2.1",
     "sails-disk": "^0.10.10",
     "validator": "^5.5.0"
