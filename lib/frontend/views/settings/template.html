@@ -2,9 +2,9 @@
 
 <div class="body-bar ng-scope">
   <div class="container">
-    <h4 class="text-center">JSSDK模板设置</h4>
+    <!--<h4 class="text-center">JSSDK模板设置</h4>-->
     <div class="alert alert-success hidden" role="alert" ng-show="updated">更新成功!</div>
-    <form class="form-horizontal message" method="post" enctype="multipart/form-data">
+    <form class="form-horizontal message margin-top" method="post" enctype="multipart/form-data">
           <div class="form-group">
         <label for="aes" class="col-sm-2 control-label">已经保存路径：</label>
         <div class="col-sm-10">
@@ -21,7 +21,7 @@
         <label for="aes" class="col-sm-2 control-label">选择模板路径：</label>
         <div class="col-sm-10">
           <input type="file" webkitdirectory
-          onchange="angular.element(this).scope().onSelectFile(this)"
+          onchange="angular.element(this).scope().onSelectTemplate(this)"
           name="template" ng-model="template" class="form-control" id="template" placeholder="请指定模板路径"
           />
         </div>
