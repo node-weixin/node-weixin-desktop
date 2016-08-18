@@ -33,9 +33,6 @@
           <table class="table" ng-show="jssdk.url">
             <tr>
               <th class="text-center">
-                项目
-              </th>
-              <th class="text-center">
                 地址
               </th>
               <th class="text-center">
@@ -43,47 +40,57 @@
               </th>
             </tr>
             <tr>
-              <td>
-                当前URL地址
-              </td>
-              <td>
-                {{jssdk.url || '未连接'}}
-              </td>
-              <td>
+              <th>
+                当前网页URL：
+              </th>
+              <td rowspan=2  class="text-center">
                 <a ng-show="jssdk.url" ng-click="open()" class="btn btn-default">打开</a>
               </td>
             </tr>
             <tr>
               <td>
-                服务器校验地址
+                {{jssdk.url || '未连接'}}
               </td>
-              <td>
-                {{jssdk.url}}{{jssdk.prefix}}/auth/ack
-              </td>
-              <td>
+
+            </tr>
+            <tr>
+              <th>
+                服务器校验地址：
+              </th>
+              <td rowspan=2  class="text-center">
                 <button ng-click="copy()" class="btn btn-default">复制</button>
               </td>
             </tr>
             <tr>
               <td>
-                JSSDK测试网页地址
+                {{jssdk.url}}{{jssdk.prefix}}/auth/ack
               </td>
-              <td>
-                {{jssdk.url}}{{jssdk.prefix}}/jssdk<br/>
-                <p>微信扫描打开网址</p>
-                <div id="qrcode-jssdk"></div>
-              </td>
-              <td>
+
+            </tr>
+            <tr>
+              <th>
+                JSSDK测试网页地址：
+              </th>
+              <td rowspan="2">
               </td>
             </tr>
             <tr>
               <td>
-                JSSDK配置请求地址
+                {{jssdk.url}}{{jssdk.prefix}}/jssdk<br/>
+                <p>微信扫描打开网址2</p>
+                <div id="qrcode-jssdk"></div>
               </td>
+            </tr>
+            <tr>
+              <th>
+                JSSDK配置请求地址：
+              </th>
+              <td rowspan="2">
+              </td>
+            </tr>
+            <tr>
               <td>
                 {{jssdk.url}}{{jssdk.prefix}}/jssdk/config
-              </td>
-              <td>
               </td>
             </tr>
           </table>
