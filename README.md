@@ -1,22 +1,32 @@
-# node-weixin-desktop [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Desktop Application for node-weixin
+# node-weixin-desktop 
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-## Installation
+> WeTop微信伴侣
+
+## 下载地址
+
+[https://yun.baidu.com/s/1nuBpOBR](https://yun.baidu.com/s/1nuBpOBR)
+
+## 编译
 
 ```sh
-$ npm install --save node-weixin-desktop
+$ sh sh/all.sh
 ```
 
-## Usage
+## 图片
 
-```js
-var nodeWeixinDesktop = require('node-weixin-desktop');
+![](./assets/1.png)
+![](./assets/2.png)
+![](./assets/3.png)
+![](./assets/4.png)
+![](./assets/5.png)
+![](./assets/7.png)
+![](./assets/8.png)
+![](./assets/9.png)
 
-nodeWeixinDesktop('Rainbow');
-```
 ## License
 
-Apache-2.0 © [node-weixin](blog.3gcnbeta.com)
+Apache v2.0 © [node-weixin](blog.3gcnbeta.com)
 
 
 [npm-image]: https://badge.fury.io/js/node-weixin-desktop.svg
