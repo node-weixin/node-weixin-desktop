@@ -18,4 +18,4 @@ echo $ICON
 ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/
 
 electron-packager . $APPNAME --platform=$PLATFORM --arch=$ARCH --app-version=$APPVERSION \
---asar=true --icon=$ICON --overwrite --out=$RELEASE
+--asar=true --icon=$ICON --prune --overwrite --out=$RELEASE
